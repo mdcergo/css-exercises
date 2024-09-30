@@ -9,6 +9,11 @@ html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: [col1] 300px [col2] 900px;
+  grid-template-rows: [row1] 100px [row2] 100px [row3] 500px [row4] 100px;
+  column-gap: 15px;
+  row-gap: 15px;
 }
 
 .container div {
@@ -22,22 +27,34 @@ html {
 
 .header {
   background-color: #006157;
+  grid-column-start: 1;
+  grid-column-end: span 2;
 }
 
 .sidebar {
   background-color: #005B94;
+  grid-row-start: 2;
+  grid-row-end: span 2;
 }
 
 .nav {
   background-color: #642cde;
+  grid-row-start: 2;
+  grid-row-end: 2;
 }
 
 .article {
   background-color: #7E1DC3;
+  grid-row-start: 3;
+  grid-row-end: 3;
 }
 
 .footer {
   background-color: #393f4d;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 4;
+  grid-row-end: 4;
 }
 
 .article p {
